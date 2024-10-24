@@ -16,7 +16,7 @@ Este projeto faz parte do desenvolvimento de um site utilizando **HTML**, **CSS*
 Para começar a trabalhar no projeto, clona o repositório. De seguida, certifica-te de que estás a trabalhar na branch `develop`:
 
 ```
-git clone https://github.com/teu-usuario/room3-web-final-project-html-css-js.git
+git clone https://github.com/ptfrodrigues/room3-web-final-project-html-css-js
 cd room3-web-final-project-html-css-js
 git checkout develop
 ```
@@ -67,30 +67,72 @@ Espera pela revisão e aprovação antes de fundir o PR.
 
 ## Explicação dos comandos git
 
-```git clone https://github.com/ptfrodrigues/*``` Clona o repositório remoto do GitHub para a tua máquina local.
+```
+git clone https://github.com/ptfrodrigues/room3-web-final-project-html-css-js
+``` 
+Clona o repositório remoto do GitHub para a tua máquina local.
 
-```cd room3-web-final-project-html-css-js``` Entra no diretório do projeto clonado.
+```
+cd room3-web-final-project-html-css-js
+``` 
+Entra no diretório do projeto clonado.
 
-```git checkout develop``` Muda para a branch `develop`, onde o desenvolvimento ativo acontece.
+```
+git checkout develop
+``` 
+Muda para a branch `develop`, onde o desenvolvimento ativo acontece.
 
-```git checkout -b feature/nome-da-funcionalidade``` Cria e muda para uma nova branch de funcionalidade a partir de `develop`.
+```
+git checkout -b feature/feature
+``` 
+Cria e muda para uma nova branch de funcionalidade a partir de `develop`.
 
-```git add .``` Adiciona todas as alterações feitas ao "staging area", preparando-as para o commit.
+```
+git add .
+``` 
+Adiciona todas as alterações feitas ao "staging area", preparando-as para o commit.
 
-```git commit -m "Descrição do commit"``` Regista as alterações com uma mensagem clara e concisa.
+```
+git commit -m "Message"
+``` 
+Regista as alterações com uma mensagem clara e concisa.
 
-```git fetch origin``` Vai buscar as últimas atualizações de todas as branches do repositório remoto, sem integrá-las diretamente.
+```
+git fetch origin
+```
+Vai buscar as últimas atualizações de todas as branches do repositório remoto, sem integrá-las diretamente.
 
-```git checkout develop``` Muda novamente para a branch `develop` para garantir que está atualizada antes de integrares a tua branch de funcionalidade.
+```
+git checkout develop
+``` 
+Muda novamente para a branch `develop` para garantir que está atualizada antes de integrares a tua branch de funcionalidade.
 
-```git pull origin develop``` Atualiza a branch `develop` local com as últimas alterações disponíveis no repositório remoto.
+```
+git pull origin develop
+```
+Atualiza a branch `develop` local com as últimas alterações disponíveis no repositório remoto.
 
-```git checkout feature/nome-da-funcionalidade``` Volta para a tua branch de funcionalidade.
+```
+git checkout feature/feature
+```
+Volta para a tua branch de funcionalidade.
 
-```git rebase develop``` Aplica as alterações mais recentes de develop em cima da tua branch de funcionalidade, criando um histórico linear.
+```
+git rebase develop
+```
+Aplica as alterações mais recentes de develop em cima da tua branch de funcionalidade, criando um histórico linear.
 
-```git add .``` Adiciona qualquer alteração feita durante a resolução de conflitos gerados pelo rebase.
+```
+git add .
+```
+Adiciona qualquer alteração feita durante a resolução de conflitos gerados pelo rebase.
 
-```git rebase --continue``` Continua o processo de rebase depois de resolver os conflitos.
+```
+git rebase --continue
+```
+Continua o processo de rebase depois de resolver os conflitos.
 
-```git push origin feature/nome-da-funcionalidade``` Envia a tua branch de funcionalidade para o repositório remoto para ser revista num Pull Request.
+```
+git push origin feature/feature
+```
+Envia a tua branch de funcionalidade para o repositório remoto para ser revista num Pull Request.
