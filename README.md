@@ -67,72 +67,86 @@ Espera pela revisão e aprovação antes de fundir o PR.
 
 ## Explicação dos comandos git
 
-1. ```
+1.
+```
 git clone https://github.com/ptfrodrigues/room3-web-final-project-html-css-js
 ``` 
 > Clona o repositório remoto do GitHub para a tua máquina local.
 
-2. ```
+2.
+```
 cd room3-web-final-project-html-css-js
 ``` 
 > Entra no diretório do projeto clonado.
 
-3. ```
+3.
+```
 git checkout develop
 ``` 
 > Muda para a branch `develop`, onde o desenvolvimento ativo acontece.
 
-4. ```
+4.
+```
 git checkout -b feature/feature
 ``` 
 > Cria e muda para uma nova branch de funcionalidade a partir de `develop`.
 
-5. ```
+5.
+```
 git add .
 ``` 
 > Adiciona todas as alterações feitas ao "staging area", preparando-as para o commit.
 
-6. ```
+6.
+```
 git commit -m "Message"
 ``` 
 > Regista as alterações com uma mensagem clara e concisa.
 
-7. ```
+7.
+```
 git fetch origin
 ```
 > Vai buscar as últimas atualizações de todas as branches do repositório remoto, sem integrá-las diretamente.
 
-8. ```
+8.
+```
 git checkout develop
 ``` 
 > Muda novamente para a branch `develop` para garantir que está atualizada antes de integrares a tua branch de funcionalidade.
 
-9. ```
+9.
+```
 git pull origin develop
 ```
 > Atualiza a branch `develop` local com as últimas alterações disponíveis no repositório remoto.
 
-10. ```
+10.
+```
 git checkout feature/feature
 ```
 > Volta para a tua branch de funcionalidade.
 
-11. ```
+11.
+```
 git rebase develop
 ```
 > Aplica as alterações mais recentes de develop em cima da tua branch de funcionalidade, criando um histórico linear.
 
-12. ```
+12.
+```
 git add .
 ```
 > Adiciona qualquer alteração feita durante a resolução de conflitos gerados pelo rebase.
 
-13. ```
+13.
+```
 git rebase --continue
 ```
 > Continua o processo de rebase depois de resolver os conflitos.
 
-14. ```
+14.
+```
 git push origin feature/feature
 ```
 > Envia a tua branch de funcionalidade para o repositório remoto para ser revista num Pull Request.
