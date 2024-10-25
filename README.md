@@ -2,9 +2,9 @@
 
 ## Descrição do Projeto
 
-Este projeto faz parte do desenvolvimento de um site utilizando **HTML**, **CSS** e **JavaScript**. A estrutura do repositório segue um modelo de desenvolvimento colaborativo com as branchs `main` e `develop`, para garantir a estabilidade e o fluxo contínuo de integração.
+Este projeto faz parte do desenvolvimento de um site utilizando **HTML**, **CSS** e **JavaScript**. A estrutura do repositório segue um modelo de desenvolvimento colaborativo com as branches `main` e `develop`, para garantir a estabilidade e o fluxo contínuo de integração.
 
-## Estrutura de Branchs
+## Estrutura de Branches
 
 - **main**: Esta é a branch de produção que contém código estável e pronto para ser implementado em produção. Só recebe merges da branch `develop` após revisão e testes completos.
 - **develop**: Esta é a branch principal de desenvolvimento, onde todas as novas funcionalidades e correções de bugs são integradas e testadas antes de serem adicionadas na branch `main`.
@@ -23,56 +23,13 @@ git checkout develop
 
 ### 2. Criar uma nova branch
 
-Quando fores trabalhar numa nova funcionalidade ou correção de bug, deves sempre criar uma nova branch a partir de `develop`. Usa uma convenção clara e descritiva, como por exemplo:
-
-feature/nome-da-funcionalidade: Para desenvolver novas funcionalidades. 
-```
-feature/ISSUE-101-galeria-imagens 
-feature/ISSUE-102-pagina-blog 
-feature/ISSUE-103-adicionar-botao-partilhar 
-```
-
-fix/nome-do-bug: Para correção de bugs encontrados no projeto.
-```
-fix/BUG-201-alinhamento-css
-fix/BUG-202-texto-ultrapassa-container
-fix/BUG-203-corrigir-menu-mobile
-```
-
-docs/nome-da-documentacao: Para alterações na documentação do projeto. 
-```
-docs/ISSUE-301-atualizar-readme
-docs/ISSUE-302-adicionar-documentacao-api-js
-```
-
-improvement/nome-da-melhoria: Para melhorias no desempenho, estrutura, ou qualidade do código.
-```
-improvement/ISSUE-401-melhorar-performance-site
-improvement/ISSUE-402-optimizar-imagens-carregamento
-improvement/ISSUE-403-refinar-estrutura-html
-```
-
-hotfix/nome-do-hotfix: Para resolver problemas críticos e urgentes.
-```
-hotfix/BUG-501-corrigir-falha-critica
-hotfix/BUG-502-resolver-problema-seguranca
-```
-
-test/nome-dos-testes: Para adicionar ou melhorar testes no projeto.
-```
-test/ISSUE-601-implementar-testes-unitarios-js
-test/ISSUE-602-criar-testes-interface-formulario-contacto
-```
-
-chore/nome-da-tarefa: Para tarefas administrativas ou de manutenção do projeto.
-```
-chore/ISSUE-701-atualizar-dependencias
-chore/ISSUE-702-configurar-linter
-```
+Sempre que trabalhares numa nova funcionalidade ou correção de bug, cria uma nova branch a partir da `develop`:
 
 ```
 git checkout -b feature/ISSUE-XXX-nome-da-funcionalidade
 ```
+
+Para mais detalhes sobre a convenção de nomeação de branches, consulta o [branch naming guide](docs/branch-naming-guide.md).
 
 ### 3. Fazer alterações e commit
 
@@ -103,14 +60,7 @@ Depois de teres a certeza que a tua branch está atualizada e sem conflitos, faz
 git push origin feature/ISSUE-XXX-nome-da-funcionalidade
 ```
 
-### 6. Criar um Pull Request
-
-1. Vai ao GitHub e abre um Pull Request (PR) da tua branch `feature/ISSUE-XXX-nome-da-funcionalidade` para `develop`.
-2. Certifica-te de que incluis uma descrição clara das alterações e, se aplicável, uma referência ao issue correspondente (e.g., `Closes #123`).
-
-Espera pela revisão e aprovação antes de fundir o PR.
-
-## Explicação dos comandos git
+## Explicação dos comandos Git
 
 1. Clona o repositório remoto do GitHub para o teu computador.
 ```
