@@ -33,11 +33,11 @@ Para mais detalhes sobre a convenção de nomeação de branches, consulta o [br
 
 ### 3. Fazer alterações e commit
 
-Depois de fazeres as alterações no teu código, adiciona os ficheiros modificados e faz o commit das tuas mudanças com uma mensagem clara e concisa.
+Depois de fazeres as alterações no teu código, adiciona os ficheiros modificados e faz o commit das tuas mudanças com uma mensagem clara, concisa e #XXX número do ISSUE.
 
 ```
 git add .
-git commit -m "feat: implementação da navbar"
+git commit -m "feature: implementação nome-da-funcionalidade #XXX"
 ```
 
 ### 4. Atualizar a branch `develop` e resolver conflitos
@@ -89,7 +89,7 @@ git add .
 
 6. Regista as alterações com uma mensagem concisa.
 ```
-git commit -m "Message"
+git commit -m "feat: implementação da navbar #101"
 ``` 
 
 7. Vai buscar as últimas atualizações de todas as branchs do repositório remoto, sem integrá-las diretamente.
