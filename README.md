@@ -11,7 +11,7 @@ Este projeto faz parte do desenvolvimento de um site utilizando **HTML**, **CSS*
 
 ## Como Iniciar
 
-### 1. Clonar o repositório
+#### 1. Clonar o repositório
 
 Para começar a trabalhar no projeto, clona o repositório. De seguida, certifica-te de que estás a trabalhar na branch `develop`:
 
@@ -21,7 +21,7 @@ cd room3-web-final-project-html-css-js
 git checkout develop
 ```
 
-### 2. Criar uma nova branch
+#### 2. Criar uma nova branch
 
 Sempre que trabalhares numa nova funcionalidade ou correção de bug, cria uma nova branch a partir da `develop`:
 
@@ -31,7 +31,7 @@ git checkout -b feature/ISSUE-XXX-nome-da-funcionalidade
 
 Para mais detalhes sobre a convenção de nomeação de branches, consulta o [branch naming guide](docs/branch-naming-guide.md).
 
-### 3. Fazer alterações e commit
+#### 3. Fazer alterações e commit
 
 Depois de fazeres as alterações no teu código, adiciona os ficheiros modificados e faz o commit das tuas mudanças com uma mensagem clara, concisa e #XXX número do ISSUE.
 
@@ -40,7 +40,7 @@ git add .
 git commit -m "feature: implementação nome-da-funcionalidade #XXX"
 ```
 
-### 4. Atualizar a branch `develop` e resolver conflitos
+#### 4. Atualizar a branch `develop` e resolver conflitos
 
 Antes de fazeres push, certifica-te de que a tua branch está atualizada com a última versão de `develop`:
 
@@ -52,7 +52,7 @@ git checkout feature/ISSUE-XXX-nome-da-funcionalidade
 git rebase develop
 ```
 
-### 5. Fazer push da branch
+#### 5. Fazer push da branch
 
 Depois de teres a certeza que a tua branch está atualizada e sem conflitos, faz o push das tuas alterações para o repositório remoto:
 
