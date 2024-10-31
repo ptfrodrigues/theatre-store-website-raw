@@ -1,133 +1,125 @@
-# Room3 Web Final Project (HTML, CSS, JS)
+# Room3 - Projeto de Site Responsivo
 
 ## Descrição do Projeto
 
-Este projeto faz parte do desenvolvimento de um site utilizando **HTML**, **CSS** e **JavaScript**. A estrutura do repositório segue um modelo de desenvolvimento colaborativo com as branches `main` e `develop`, para garantir a estabilidade e o fluxo contínuo de integração.
+Este é o projeto Room3, um site responsivo que tem como objetivo mostrar as próximas peças de teatro que vão estrear. O site está dividido em diferentes páginas, desenvolvidas por uma equipa de quatro membros, cada um sendo responsável por uma secção específica do site. O objetivo é criar uma experiência coesa e uniforme para o utilizador, permitindo-lhe explorar facilmente as peças de teatro, efetuar pagamentos e obter informações adicionais sobre o projeto e os seus criadores.
 
-## Estrutura de Branches
+## Tabela de Conteúdos
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [URLs do Projeto](#urls-do-projeto)
+- [Instruções para Contribuição](#instruções-para-contribuição)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Práticas](#práticas)
 
-- **main**: Esta é a branch de produção que contém código estável e pronto para ser implementado em produção. Só recebe merges da branch `develop` após revisão e testes completos.
-- **develop**: Esta é a branch principal de desenvolvimento, onde todas as novas funcionalidades e correções de bugs são integradas e testadas antes de serem adicionadas na branch `main`.
-
-## Como Iniciar
-
-### 1. Clonar o repositório
-
-Para começar a trabalhar no projeto, clona o repositório. De seguida, certifica-te de que estás a trabalhar na branch `develop`:
-
-```
-git clone https://github.com/ptfrodrigues/room3-web-final-project-html-css-js
-cd room3-web-final-project-html-css-js
-git checkout develop
-```
-
-### 2. Criar uma nova branch
-
-Sempre que trabalhares numa nova funcionalidade ou correção de bug, cria uma nova branch a partir da `develop`:
+## Estrutura do Projeto
 
 ```
-git checkout -b feature/ISSUE-XXX-nome-da-funcionalidade
+root/
+|-- index.html
+|-- assets/
+|    |-- css/
+|    |    |-- main.css
+|    |-- js/
+|    |    |-- main.js
+|    |-- images/
+|         |-- logo.png
+|-- pages/
+|    |-- Pedro/
+|    |    |-- index.html
+|    |    |-- styles.css
+|    |-- Eduardo/
+|    |    |-- index.html
+|    |    |-- styles.css
+|    |-- Filipe/
+|    |    |-- index.html
+|    |    |-- styles.css
+|    |-- Vanessa/
+|    |    |-- index.html
+|    |    |-- styles.css
+|-- docs/
+|-- LICENSE
+|-- README.md
 ```
 
-Para mais detalhes sobre a convenção de nomeação de branches, consulta o [branch naming guide](docs/branch-naming-guide.md).
+- **index.html**: A homepage principal do site.
+- **assets/**: Diretório que contém recursos comuns a todas as páginas do projeto.
+  - **css/**: Contém o ficheiro CSS principal para estilos gerais do site.
+  - **js/**: Contém o ficheiro JavaScript principal para funcionalidades do site.
+  - **images/**: Contém imagens utilizadas no projeto, como o logo.
+- **pages/**: Diretório que contém as páginas individuais de cada membro da equipa.
+  - **Pedro/**: Contém a homepage do projeto, que apresenta informações gerais e introdução.
+  - **Eduardo/**: Contém a página de listagem das peças de teatro disponíveis para assistir.
+  - **Filipe/**: Contém a página de pagamento, onde os utilizadores podem efetuar pagamentos para assistir às peças.
+  - **Vanessa/**: Contém a página "Sobre" e a página de contacto, oferecendo informações adicionais sobre o projeto e a equipa.
+- **docs/**: Diretório de documentação que contém o guia de ajuda para o desenvolvimento e colaboração no projeto.
+  - **prototypes/**: Diretório que contém capturas de ecrã do projeto.
+- **LICENSE**: Ficheiro de licença para o projeto.
+- **README.md**: Ficheiro que contém a documentação principal do projeto.
 
-### 3. Fazer alterações e commit
+## URLs do Projeto
 
-Depois de fazeres as alterações no teu código, adiciona os ficheiros modificados e faz o commit das tuas mudanças com uma mensagem clara, concisa e #XXX número do ISSUE.
+Cada membro tem uma página específica que pode ser acedida diretamente pelo seguinte URL:
+- Homepage (Pedro): `/pages/pedro/index.html`
+- Página das Peças (Eduardo): `/pages/eduardo/index.html`
+- Página de Pagamento (Filipe): `/pages/filipe/index.html`
+- Sobre e Contacto (Vanessa): `/pages/vanessa/index.html`
 
-```
-git add .
-git commit -m "feature: implementação nome-da-funcionalidade #XXX"
-```
+## Instruções para Contribuição
 
-### 4. Atualizar a branch `develop` e resolver conflitos
+1. **Clonar o Repositório**: Clone o repositório utilizando o comando:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
+2. **Criar uma Branch**: Crie uma nova branch para trabalhar nas suas alterações:
+   ```bash
+   git checkout -b nome-da-branch
+   ```
+3. **Fazer Commit das Alterações**: Assim que terminar as alterações, faça commit com uma mensagem clara:
+   ```bash
+   git commit -m "nome-da-branch: Mensagem descritiva do commit"
+   ```
+4. **Push e Pull Request**: Envie as alterações para o repositório e crie um Pull Request para revisão:
+   ```bash
+   git push origin nome-da-branch
+   ```
 
-Antes de fazeres push, certifica-te de que a tua branch está atualizada com a última versão de `develop`:
+### Exemplos de Branches
+1. **Criar uma Nova Funcionalidade**
+   - **Nome da Branch**: `feature/nova-funcionalidade`
+   - **Comando Git**:
+     ```bash
+     git checkout -b feature/card
+     ```
 
-```
-git fetch origin
-git checkout develop
-git pull origin develop
-git checkout feature/ISSUE-XXX-nome-da-funcionalidade
-git rebase develop
-```
+2. **Corrigir Bug na Página de Pagamento**
+   - **Nome da Branch**: `fix/corrigir-bug-pagamento`
+   - **Comando Git**:
+     ```bash
+     git checkout -b fix/padding-css
+     ```
 
-### 5. Fazer push da branch
-
-Depois de teres a certeza que a tua branch está atualizada e sem conflitos, faz o push das tuas alterações para o repositório remoto:
-
-```
-git push origin feature/ISSUE-XXX-nome-da-funcionalidade
-```
-
-## Explicação dos comandos Git
-
-1. Clona o repositório remoto do GitHub para o teu computador.
-```
-git clone https://github.com/ptfrodrigues/room3-web-final-project-html-css-js
-``` 
-
-2. Entra no diretório clone do projeto.
-```
-cd room3-web-final-project-html-css-js
-``` 
-
-3. Muda para a branch `develop`, onde o desenvolvimento deve acontecer.
-```
-git checkout develop
-``` 
-
-4. Cria e muda para uma nova branch a partir de `develop`.
-```
-git checkout -b feature/ISSUE-XXX-nome-da-funcionalidade
-``` 
-
-5. Adiciona todas as alterações feitas ao "staging area", preparando-as para o commit.
-```
-git add .
-``` 
-
-6. Regista as alterações com uma mensagem concisa.
-```
-git commit -m "feat: implementação da navbar #101"
-``` 
-
-7. Vai buscar as últimas atualizações de todas as branchs do repositório remoto, sem integrá-las diretamente.
-```
-git fetch origin
+### Exemplo de Commit
+Para um commit relacionado à adição de uma nova secção sobre os próximos eventos, poderia ser usado:
+```bash
+git commit -m "feature: adicionar secção de peças de teatro ao pages/nome-do-membro/index.html"
 ```
 
-8. Muda novamente para a branch `develop` para garantir que está atualizada antes de integrares a branch.
-```
-git checkout develop
-``` 
-
-9. Atualiza a branch `develop` local com as últimas alterações disponíveis no repositório remoto.
-```
-git pull origin develop
+Para um commit que corrija uma propriedade CSS no contexto de uma branch de feature, poderias usar o seguinte:
+```bash
+Copy code
+git commit -m "fix: corrigir a propriedade de margem em pages/nome-do-membro/styles.css na feature de peças de teatro"
 ```
 
-10. Volta para a tua branch.
-```
-git checkout feature/ISSUE-XXX-nome-da-funcionalidade
-```
+## Tecnologias Utilizadas
+- **HTML5**: Para a estrutura das páginas.
+- **CSS3**: Para estilização.
+- **Bootstrap**: Para componentes e estilos pré-definidos, facilitando a criação de um design uniforme e responsivo. [Consulta a documentação oficial do Bootstrap](https://getbootstrap.com/docs/).
+- **JavaScript** (opcional para funcionalidades adicionais).
 
-11. Aplica as alterações mais recentes de develop em cima da branch, para um histórico linear.
-```
-git rebase develop
-```
-
-12. Adiciona qualquer alteração feita durante a resolução de conflitos gerados pelo rebase.
-```
-git add .
-```
-
-13. Continua o processo de rebase depois de resolver os conflitos.
-```
-git rebase --continue
-```
-
-14. Envia a branch para o repositório no github para ser revista num Pull Request.
-```
-git push origin feature/ISSUE-XXX-nome-da-funcionalidade
-```
+## Práticas
+- **Commits Limpos e Concisos**: As mensagens de commit devem ser claras e informativas. Use um padrão que inclua o tipo de alteração, como "fix", "feat", "refactor". Exemplo:
+  ```bash
+  feat: adicionar nova secção sobre os próximos eventos ao index.html
+  ```
+- **Branches Estruturadas**: Mantenha um esquema de nomenclatura consistente para branches, como `feature/nome-da-feature`, `fix/descricao-do-fix`.
