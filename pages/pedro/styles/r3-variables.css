@@ -1,0 +1,35 @@
+:root {
+    /* Colours */
+    --colour__black: rgb(0, 0, 0);
+    --colour__white: rgb(255, 255, 255);
+    --colour__blue: rgb(0, 12, 233);
+    --colour__green: rgb(0, 201, 27);
+    --colour__yellow: rgb(217, 232, 0);
+
+    /* Typography font family */
+    --font-family: "Open Sans";
+    --font-family__display: Anton;
+    --font-weight__display: 400;
+    --font-weight__regular: 400;
+
+    /* Typography font size */
+    --font-size: 12px;
+    --font-size__display: 10.5em;
+    --font-size__heading: 2.75em;
+    --font-size__link: 1.5em;
+    --font-size__base: var(--font-size);
+    --font-size__caption: 0.875em;
+    
+    /* Scaling factors */
+    --viewport-scale__sm: 1.1;
+    --viewport-scale__md: 1.125;
+    --viewport-scale__lg: 1.25;
+    --viewport-scale__xl: 1.5;
+    --viewport-scale__xxl: 1.75 + 2vw;
+
+    /* Padding factors */
+    --section__margin-start: 1rem;
+    --section__margin-end: 1rem;
+    --component__padding-start: 5rem;
+    --component__padding-end: 5rem;
+}

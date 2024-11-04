@@ -1,0 +1,18 @@
+.r3-utils__full-screen {
+    display: block;
+    min-height: 100dvh;
+    height: 100dvh;
+}
+
+.r3-section__padding-start {
+    padding-block-start: var(--section__padding-start);
+}
+.r3-section__padding-end {
+    padding-block-end: var(--section__padding-end);
+}
+.r3-component__padding-start {
+    padding-block-start: var(--component__padding-start);
+}
+.r3-component__padding-end {
+    padding-block-end: var(--component__padding-end);
+}
