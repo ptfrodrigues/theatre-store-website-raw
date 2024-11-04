@@ -1,0 +1,12 @@
+#r3-section__hero-banner {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 15rem;
+    min-height: 100dvh;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.r3-hb-container-h-500 {
+    
+}
