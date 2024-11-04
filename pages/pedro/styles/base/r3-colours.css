@@ -1,0 +1,20 @@
+.r3-colour__blue {
+    background-color: var(--colour__blue);
+    color: var(--colour__white);
+}
+.r3-colour__green {
+    background-color: var(--colour__green);
+    color: var(--colour__white);
+}
+.r3-colour__yellow {
+    background-color: var(--colour__yellow);
+    color: var(--colour__black);
+}
+.r3-colour__black {
+    background-color: var(--colour__black);
+    color: var(--colour__white);
+}
+.r3-colour__white {
+    background-color: var(--colour__white);
+    color: var(--colour__black);
+}
