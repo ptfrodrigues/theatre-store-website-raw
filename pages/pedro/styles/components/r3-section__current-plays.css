@@ -1,0 +1,4 @@
+#r3-section__current-plays {
+    display: flex;
+    flex-direction: column;
+}

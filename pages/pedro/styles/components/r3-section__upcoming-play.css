@@ -1,0 +1,10 @@
+#r3-section__upcoming-plays {
+
+}
+
+.r3-section__upcoming-plays__image-size {
+    width: 250px;
+}
+@media (min-width: 768px) {
+    .r3-section__upcoming-plays__image-size { width: 100%; }
+}

@@ -7,3 +7,6 @@
 @import url("./base/r3-typography.css");
 @import url("./components/r3-section__navigation.css");
 @import url("./components/r3-section__hero-banner.css");
+@import url("./components/r3-section__featured-play.css");
+@import url("./components/r3-section__current-plays.css");
+@import url("./components/r3-section__upcoming-play.css");
