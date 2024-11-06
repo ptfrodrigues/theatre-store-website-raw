@@ -1,0 +1,139 @@
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+body {
+    background-color: #000000; /* Define o fundo do body como preto */
+    color: #ffffff; /* Define o texto como branco para contraste */
+}
+
+/* Fundo escurecido */
+#custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* opacidade */
+    z-index: 1040; /* deve estar acima do conteúdo, mas abaixo do modal */
+    display: none; /* oculto por padrão */
+}
+
+/* Estilos básicos do modal */
+.modal-content {
+    background-color: #222; /* Fundo escuro para o modal */
+    color: #f1f1f1; /* Cor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    position: relative;
+}
+
+/* Borda brilhante com CSS */
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+    background-size: 300% 300%;
+    animation: glowing 2s linear infinite;
+    z-index: -1;
+}
+
+/* Animação para o efeito de brilho */
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo para a galeria de imagens */
+.gallery-img {
+    filter: grayscale(100%); /* Deixa a imagem em preto e branco */
+    transition: filter 0.3s ease; /* Transição suave para o efeito */
+}
+
+/* Remove o filtro ao passar o cursor */
+.gallery-img:hover {
+    filter: grayscale(0%); /* Traz a cor de volta */
+}
+
+
+
+
+
+/* Configuração geral do modal */
+.modal-content {
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0; /* Remove o padding para que as seções ocupem toda a área */
+}
+
+/* Estilo para a seção 1 como cabeçalho */
+.section-1 {
+    height: 200px; /* Altura da imagem de cabeçalho */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para a seção 2 com fundo preto */
+.section-2 {
+    padding: 20px;
+    background-color: #000000; /* Fundo preto */
+    color: #ffffff; /* Texto branco para contraste */
+}
+
+/* Estilos para outras seções */
+.section-3 {
+    padding: 20px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+
+
+
+/* Configurações básicas para o contêiner da imagem */
+.image-container {
+    position: relative; /* Necessário para que o rótulo seja posicionado em relação a este contêiner */
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Estilos para a imagem */
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Sobreposição e estilo do rótulo */
+.status-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10; /* Garante que o rótulo fique acima da imagem */
+    pointer-events: none; /* Evita interferência no hover da imagem */
+}
