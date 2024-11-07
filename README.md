@@ -74,8 +74,8 @@ root/
 Cada membro tem uma página específica que pode ser acedida diretamente pelo seguinte URL:
 - Homepage (Pedro): `index.html`
 - Página das Peças (Eduardo): `/pages/eduardo/index.html`
-- Página de Pagamento (Filipe): `/pages/vanessa/index.html`
-- Sobre e Contacto (Vanessa): `/pages/felipe/index.html`
+- Página de Pagamento (Vanessa): `/pages/vanessa/index.html`
+- Sobre e Contacto (Felipe): `/pages/felipe/index.html`
 
 ## Instruções para Contribuição
 
