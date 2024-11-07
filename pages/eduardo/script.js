@@ -5,7 +5,7 @@ const pieces = [
         imgSrc: '../img/a-tupperware-of-ashes-tanika-gupta.jpg',
         title: 'A Tupperware of Ashes',
         description: 'Um drama familiar intenso e comovente sobre a vida, imigração e o ciclo espiritual indiano de morte e renascimento.',
-        section1ImgSrc: '../img/a-tupperware-of-ashes-tanika-gupta.jpg',
+        section1ImgSrc: '../../assets/images/plays-current/a-tupperware-of-ashes-tanika-gupta.jpg',
         author: 'Tanika Gupta',
         ticketLink: 'https://link_para_compra_de_bilhete_1'
     },
@@ -13,7 +13,7 @@ const pieces = [
         imgSrc: '../img/ballet-shoes-noel-streatfeild.jpg',
         title: 'Ballet Shoes',
         description: 'O famoso livro best-seller é reinventado de forma espetacular para o palco nesta nova adaptação de Kendall Feaver.',
-        section1ImgSrc: '../img/ballet-shoes-noel-streatfeild.jpg',
+        section1ImgSrc: '../../assets/images/plays-current/ballet-shoes-noel-streatfeild.jpg',
         author: 'Noel Streatfeild',
         ticketLink: 'https://link_para_compra_de_bilhete_2'
     },
@@ -21,7 +21,7 @@ const pieces = [
         imgSrc: '../img/coriolanus-william-shakespeare.jpg',
         title: 'Coriolanus',
         description: 'David Oyelowo faz o seu aguardado regresso ao palco de Londres nesta emocionante nova produção da tragédia política intemporal de Shakespeare.',
-        section1ImgSrc: '../img/coriolanus-william-shakespeare.jpg',
+        section1ImgSrc: '../../assets/images/plays-current/coriolanus-william-shakespeare.jpg',
         author: 'William Shakespeare',
         ticketLink: 'https://link_para_compra_de_bilhete_3'
     },
@@ -29,7 +29,7 @@ const pieces = [
         imgSrc: '../img/war-horse-michael-morpurgo.jpg',
         title: 'War Horse',
         description: 'Uma experiência teatral inesquecível que leva o público numa extraordinária jornada desde os campos de Devon até às trincheiras da Primeira Guerra Mundial em França.',
-        section1ImgSrc: '../img/war-horse-michael-morpurgo.jpg',
+        section1ImgSrc: '../../assets/images/plays-current/war-horse-michael-morpurgo.jpg',
         author: 'Michael Morpurgo',
         ticketLink: 'https://link_para_compra_de_bilhete_4'
     },
@@ -37,7 +37,7 @@ const pieces = [
         imgSrc: '../img/The-Importance-of-Being-Earnest-National-Theatre-artwork-2000x1000-1.jpg',
         title: 'The Importance of Being Earnest',
         description: 'Uma das mais famosas comédias de costumes, explorando temas de identidade e as complexidades sociais com o humor único de Wilde.',
-        section1ImgSrc: '../img/The-Importance-of-Being-Earnest-National-Theatre-artwork-2000x1000-1.jpg',
+        section1ImgSrc: '../../assets/images/plays-upcoming/the-importance-of-being-earnest.jpg',
         author: 'Oscar Wilde',
         ticketLink: 'https://link_para_compra_de_bilhete_8'
     },
@@ -45,7 +45,7 @@ const pieces = [
         imgSrc: '../img/frankenstein-play.png',
         title: 'Frankenstein',
         description: 'Uma reinvenção do clássico conto de terror de Mary Shelley, que narra a história de Victor Frankenstein e a sua monstruosa criação.',
-        section1ImgSrc: '../pedro/assets/images/frankenstein-play.png',
+        section1ImgSrc: '../../assets/images/frankenstein-play.png',
         author: 'Mary Shelley',
         ticketLink: 'https://link_para_compra_de_bilhete_9'
     },
@@ -55,7 +55,7 @@ const pieces = [
         imgSrc: '../img/alterations-michael-abbensetts.jpg',
         title: 'Alterations',
         description: 'Uma comédia emblemática que ilumina a experiência da geração Windrush na Londres dos anos 70.',
-        section1ImgSrc: '../img/alterations-michael-abbensetts.jpg',
+        section1ImgSrc: '../../assets/images/plays-upcoming/alterations-michael-abbensetts.jpg',
         author: 'Michael Abbensetts',
         ticketLink: 'https://link_para_compra_de_bilhete_5'
     },
@@ -63,7 +63,7 @@ const pieces = [
         imgSrc: '../img/nye-tim-price-wales-millennium-center.jpg',
         title: 'Nye',
         description: 'Uma fantasia épica galesa que segue Aneurin "Nye" Bevan, uma figura crucial na política britânica e na reforma da saúde.',
-        section1ImgSrc: '../img/nye-tim-price-wales-millennium-center.jpg',
+        section1ImgSrc: '../../assets/images/plays-upcoming/nye-tim-price-wales-millennium-center.jpg',
         author: 'Tim Price',
         ticketLink: 'https://link_para_compra_de_bilhete_6'
     },
@@ -71,11 +71,12 @@ const pieces = [
         imgSrc: '../img/the-other-place-alexander-zeldin.jpg',
         title: 'The Other Place',
         description: 'Uma nova versão da clássica história de Antígona, que explora os temas de família, luto e justiça.',
-        section1ImgSrc: '../img/the-other-place-alexander-zeldin.jpg',
+        section1ImgSrc: '../../assets/images/plays-upcoming/the-other-place-alexander-zeldin.jpg',
         author: 'Alexander Zeldin',
         ticketLink: 'https://link_para_compra_de_bilhete_7'
     }
 ];
+
 
 let currentPieceIndex = 0; // índice para a peça atual exibida no modal
 
