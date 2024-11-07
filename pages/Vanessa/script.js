@@ -1,24 +1,30 @@
-let selectedPrice = 0; // Inicializa a variável para armazenar o preço da peça selecionada
+// Inicializa a variável para armazenar o preço da peça selecionada
 
-function selectShow(element) {
-    // Remover seleção de outros horários
-    const listItems = document.querySelectorAll('.list-group-item');
-    listItems.forEach(item => item.classList.remove('selected'));
+let selectedPrice = 0; 
+
+function selectShow(selectElement) {
     
-    element.classList.add('selected'); // Adicionar a classe 'selected' ao horário selecionado
-
-    document.getElementById('form-container').style.display = 'block'; // Exibir o formulário
-
-    const card = element.closest('.card');  // Obter a peça associada
+    // Exibir o formulário
+    document.getElementById('form-container').style.display = 'block'; 
+     
+    // Obter a peça associada
+    const card = selectElement.closest('.card');  
     const title = card.querySelector('.card-title').textContent; // Obter o título da peça
     selectedPrice = parseFloat(card.getAttribute('data-price')); // Obter o preço da peça
+    
+    // Obter o horário selecionado
+    const selectedDatetime = selectElement.value; 
 
-    const selectedDatetime = element.textContent; // Obter o horário selecionado
+    // Atualizar o campo do formulário com o título
+    document.getElementById('selected-title').value = title; 
 
-    document.getElementById('selected-title').value = title; // Atualizar o campo do formulário com o título
-    document.getElementById('selected-datetime').value = selectedDatetime; // Atualizar o campo do formulário com o horário
+    // Atualizar o campo do formulário com o horário
+    document.getElementById('selected-datetime').value = selectedDatetime; 
 
     updateTotal(); // Atualizar o total sempre que uma peça é selecionada
+
+    //Rolar suavemente para a seção do formulário
+    document.getElementById('form-container').scrollIntoView({ behavior: 'smooth' });  
 }
 
 function togglePaymentFields() {
