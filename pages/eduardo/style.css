@@ -1,139 +1,145 @@
+@import url("./estilogeral.css");
+
+/* Imagens da Galeria */
 .gallery-img {
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, filter 0.3s ease;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 300px; /* Define uma altura fixa para uniformizar as imagens */
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço, mantendo o centro */
+    display: block;
+    border-radius: 0; /* bordas retas para as imagens da galeria */
 }
 
+/* passa do p&b à cor ao passar o mouse */
 .gallery-img:hover {
     transform: scale(1.05);
+    filter: grayscale(0%);
 }
 
+/* fonte e cor */
 body {
-    background-color: #000000; /* Define o fundo do body como preto */
-    color: #ffffff; /* Define o texto como branco para contraste */
+    background-color: #000000; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* Fundo escurecido */
-#custom-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7); /* opacidade */
-    z-index: 1040; /* deve estar acima do conteúdo, mas abaixo do modal */
-    display: none; /* oculto por padrão */
+/* fonte dos títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton', sans-serif;
 }
 
-/* Estilos básicos do modal */
+/* layout das seções */
+#upcoming-shows h2, #upcoming-shows .row, #current-shows h2, #current-shows .row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do Modal */
+.modal-dialog {
+    max-width: 80%; /* para aumentar a largura do modal para 80% da tela */
+    max-height: 80vh; /* para limitar a altura para 80% da altura da viewport */
+    margin: auto; /* para centraliza o modal */
+}
+
 .modal-content {
-    background-color: #222; /* Fundo escuro para o modal */
-    color: #f1f1f1; /* Cor do texto */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px;
-    position: relative;
-}
-
-/* Borda brilhante com CSS */
-.modal-content::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
-    background-size: 300% 300%;
-    animation: glowing 2s linear infinite;
-    z-index: -1;
-}
-
-/* Animação para o efeito de brilho */
-@keyframes glowing {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Estilo para a galeria de imagens */
-.gallery-img {
-    filter: grayscale(100%); /* Deixa a imagem em preto e branco */
-    transition: filter 0.3s ease; /* Transição suave para o efeito */
-}
-
-/* Remove o filtro ao passar o cursor */
-.gallery-img:hover {
-    filter: grayscale(0%); /* Traz a cor de volta */
-}
-
-
-
-
-
-/* Configuração geral do modal */
-.modal-content {
-    color: #ffffff;
+    background-color: #ffffff; /* fundo branco para o modal */
+    color: #000000; /* texto preto */
     border-radius: 10px;
     overflow: hidden;
-    padding: 0; /* Remove o padding para que as seções ocupem toda a área */
+    max-height: 80vh; /* para limitar a altura da janela do modal */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Estilo para a seção 1 como cabeçalho */
+/* imagem de fundo do cabeçalho */
 .section-1 {
-    height: 200px; /* Altura da imagem de cabeçalho */
+    height: 250px; /* Aumenta o cabeçalho para maior visibilidade */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* Estilo para a seção 2 com fundo preto */
+/* conteúdo do modal */
 .section-2 {
+    flex-grow: 1;
     padding: 20px;
-    background-color: #000000; /* Fundo preto */
-    color: #ffffff; /* Texto branco para contraste */
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    overflow-y: auto; /* Habilita rolagem interna, se necessário */
 }
 
-/* Estilos para outras seções */
+/* Zona dos botões */
 .section-3 {
-    padding: 20px;
-    color: #ffffff;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-    margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 0 0 10px 10px; /* Alinha o contorno arredondado com o modal */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
+/* botão "comprar bilhete" */
+.btn-buy-ticket {
+    background-color: #ffd700;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.btn-buy-ticket:hover {
+    background-color: #ffcc00;
+}
 
+/* botão das "outras peças em exibição" */
+.btn-next {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.btn-next:hover {
+    background-color: #f0f0f0;
+}
 
-/* Configurações básicas para o contêiner da imagem */
+/* conteiner das imagens */
 .image-container {
-    position: relative; /* Necessário para que o rótulo seja posicionado em relação a este contêiner */
+    position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    width: 100%;
+    border-radius: 10px; /* arredonda as bordas do conteiner */
 }
 
-/* Estilos para a imagem */
-.image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Sobreposição e estilo do rótulo */
-.status-label {
+/* rótulo */
+.piece-label {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
-    color: #ffffff;
-    padding: 10px 15px;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 5px;
     text-align: center;
-    z-index: 10; /* Garante que o rótulo fique acima da imagem */
-    pointer-events: none; /* Evita interferência no hover da imagem */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1;
+}
+
+/* rótulo com contraste do fundo */
+.section-light .piece-label {
+    background-color: #000000; /* fundo preto */
+    color: #ffffff; /* texto branco */
+}
+
+.section-dark .piece-label {
+    background-color: #ffffff; /* fundo branco */
+    color: #000000; /* texto preto */
 }

@@ -1,63 +1,68 @@
 body {
     background-color: #f8f9fa;
+    font-family: 'Open Sans';
 }
 
 .card {
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+        
 }
 
 .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s;
+    transform: scale(1.03);
+    transition: transform 0.7s;
+    border: 2px solid;
+    border-color: #000000;
+    
+    
 }
 
-.list-group-item{
-    cursor: pointer;
+.card img{
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-.list-group-item:hover {
-    background-color: #007bff; /* Cor de fundo ao passar o mouse */
-    color: white; /* Muda a cor do texto ao passar o mouse */
+
+
+select {
+    background-color: #f8f9fa; /* Cor de fundo neutra */
+    color: #6c757d; /* Cor do texto para o placeholder */
+    border: 1px solid #ced4da;
+    padding: 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.selected {
-    background-color: #007bff; /* Cor de fundo quando a opção é selecionada */
-    color: white; /* Muda a cor do texto quando selecionado */
+
+
+/* Alterar cor quando uma opção é selecionada */
+select:focus, 
+select:not([value=""]) {
+    background-color: #ffffff; /* Cor de fundo branco */
+    color: #000000; /* Cor do texto normal */
 }
+
+/* Estilo da primeira opção (placeholder) */
+select option[disabled] {
+    color: #6c757d;
+}
+
 
 #form-container{
     margin-bottom: 30px;
     padding: 30px;
+    
 }
 
 button{
     margin-top: 20px;
 }
 
-header {
-    background: linear-gradient(to right, #490101, #ff0000); /* Gradiente vermelho */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 50px 0; /* Espaçamento superior e inferior */
-    position: relative;
-}
-
-@keyframes pulse {     /*definir uma animação de pulsar*/
-    0% {
-        transform: scale(1); /* Tamanho original */
-    }
-    50% {
-        transform: scale(1.05); /* Aumenta 5% */
-    }
-    100% {
-        transform: scale(1); /* Retorna ao tamanho original */
-    }
-}
-
-.pulse {
-    display: inline-block; /* Para que a animação funcione corretamente */
-    animation: pulse 2s infinite; /* Nome da animação, duração e repetição infinita */
-}
 
 footer h1{
     text-align: center;
@@ -67,3 +72,32 @@ footer h1{
 #total-price{
     padding-top: 10px;
 }
+
+.text-center{
+    font-family: 'Anton';
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 30px;
+}
+
+.card-title{
+    font-family: 'Anton';
+    text-transform: uppercase;
+    height: 45px;
+}
+div h2{
+    font-family: 'Anton';
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+div h5{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container-lg{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+

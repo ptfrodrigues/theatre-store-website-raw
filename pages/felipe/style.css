@@ -1,0 +1,78 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #ffffff; /* Fundo branco */
+    
+}
+h1, h2, h3, .navbar-brand {
+    font-family: 'Anton', sans-serif;
+}
+
+header {
+    background-color: #f8f9fa; /* Fundo cinza claro */
+}
+
+.intro-section, .description-section, .address-section, .contact-section, .hours-section {
+    background-color: #f5f5f5; /* Cinza bem claro para as seções */
+    color: #333; /* Texto escuro */
+    padding: 30px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento entre seções */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+h2.h3 {
+    margin-top: 20px; /* Espaço acima dos títulos */
+}
+
+footer {
+    background-color: #f8f9fa; /* Fundo cinza claro para o rodapé */
+}
+
+ul.list-unstyled {
+    padding-left: 0; /* Remove padding */
+}
+
+ul.list-unstyled li {
+    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+}
+
+.intro-section .container, .description-section .container, .address-section .container, .contact-section .container, .hours-section .container {
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+:root {
+    --font-family: 'Open Sans', sans-serif; /* Fonte principal */
+    --font-size-base: 16px; /* Tamanho de fonte base */
+    
+}
+
+#r3-section__navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: var(--navbar-padding-block);
+    z-index: 1046;
+  }
+  
+  #r3-navbar__brand-small {
+      transition: opacity 300ms ease;
+    }
+    
+  .offcanvas-body {
+      transition: color 500ms ease;
+      background-color: var(--dynamic-background-colour);
+      color: var(--dynamic-text-colour);
+  }
+    
+  
+  #r3-navbar__toggler-text {
+    transition: color 500ms ease;
+  
+    color: var(--dynamic-text-colour);
+  }
+
+  .r3-component__padding-start {
+    padding-block-start: var(--component__padding-start);
+}
